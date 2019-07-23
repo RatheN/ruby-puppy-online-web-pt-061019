@@ -1,9 +1,10 @@
 # Add your code here
 class Dog
 
-  attr_reader :name
+  attr_accessor :name
 
   @@all = []
+  @@dog_names = []
 
   def initialize(name)
     @name = name
@@ -11,9 +12,11 @@ class Dog
   end
 
   def self.all
-    @@all.each do |n|
-      puts "#{n.name}"
-    end
+    @@all
+  end
+
+  def self.print_all
+    puts @@dog_names.uniq
   end
 
   def self.clear_all

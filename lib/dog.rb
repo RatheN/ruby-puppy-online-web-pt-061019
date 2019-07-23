@@ -19,7 +19,7 @@ class Dog
     @@all.clear
   end
 
-  def self.print_all
+  def print_all
     puts @@dog_names.uniq
   end
 end
